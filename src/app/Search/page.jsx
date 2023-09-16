@@ -31,7 +31,7 @@ const Search = () => {
     setIsLoading(true);
     try {
       const data = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.NEXT_PUBLIC_MOVIE_DB_API_KEY}&language=en-US&page=1&include_adult=false&query=${searchText}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.NEXT_PUBLIC_MOVIEAPI}&language=en-US&page=1&include_adult=false&query=${searchText}`
       );
       const { results } = await data.json();
       setContent(results);
